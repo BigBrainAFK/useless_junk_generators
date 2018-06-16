@@ -21,7 +21,7 @@ async function write(i) {
 }
 
 function writePercent(number) {
-	let count = Math.round(((number / target) * 100) / 10);
+	let count = Math.floor(((number / target) * 100) / 10);
 	if (count <= last) {
 		process.stdout.cursorTo(14);
 		process.stdout.write(`${' '.repeat(target.toString().length - number.toString().length)}${number}/${target}`);
