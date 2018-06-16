@@ -1,8 +1,9 @@
 const fs = require('fs');
+const path = require('path');
 const target = 2147483647; //optimally 2147483647
 let last = -1;
 
-const stream = fs.createWriteStream('./generated.js', { flag: 'w+' });
+const stream = fs.createWriteStream(`./generated_${path.basename(__filename)}`, { flag: 'w+' });
 stream.write(`const number = Math.round(Math.random()*${target});\n\nconsole.log(\`Number is \${number}\`);\n\n`);
 
 write(0);
