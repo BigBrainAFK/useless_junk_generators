@@ -22,14 +22,10 @@ async function write(i) {
 }
 
 function writePercent(number) {
-	let count = Math.floor(((number / target) * 100) / 10);
-	if (count <= last) {
-		process.stdout.cursorTo(14);
-		process.stdout.write(`${' '.repeat(target.toString().length - number.toString().length)}${number}/${target}`);
-		return;
-	}
+	let count = Math.floor(((number / target) * 100));
+	if (count <= last) return;
 	last = count;
 	process.stdout.clearLine();
 	process.stdout.cursorTo(0);
-	process.stdout.write(`[${'='.repeat(count < 10 ? count > 1 ? count - 1 : 0 : count)}${count < 10 ? '>' : ''}${' '.repeat(count < 10 ? count === 0 ? 9: 10 - count : 0)}]`);
+	process.stdout.write(`${count}%`);
 }
