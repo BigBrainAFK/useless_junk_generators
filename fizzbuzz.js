@@ -10,7 +10,7 @@ stream.write(`for(let i = ${start}; i <= ${target}; i++){\n`);
 write(start);
 async function write(i) {
 	for (; i <= target; i++){
-		await writePercent(i);
+		writePercent(i);
 		if (!stream.write(`${i === start ? '\t' : ''}if (i === ${i}) {\n\t\tconsole.log('${!(i % 15) ? 'FizzBuzz' : !(i % 3) ? 'Fizz' : !(i % 5) ? 'Buzz' : i}');\n\t}${i !== target ? ' else ' : '\n}'}`)){
 			stream.once('drain', function() {
 				write(i + 1);
