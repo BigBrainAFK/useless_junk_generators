@@ -4,7 +4,7 @@ Bunch of js files that generate dumb junk
 
 File | Size of generated js file | Executable<sup>1</sup> | Compressed size<sup>2</sup>
 ---- | ------------------------: | :--------------------: | --------------------------:
-odd_or_even.js | 113 GB (122.369.198.735 B) | ❌ | unknown
+odd_or_even.js | 113 GB (122.369.198.735 B) | ❌ | 676 MB (709.031.105 B)
 fizzbuzz.js | 115 GB (123.852.506.906 B) | ❌ | 1,82 GB (1.962.195.145 B)
 
 <sup><b>1</b></sup> Using  2.147.483.647 as target value</br>
